@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProductList from './components/ProductList';
+import Button from '@mui/material/Button';
 
 const App = () => {
   // TODO: Define initial product data
@@ -29,9 +30,9 @@ const App = () => {
       <h1>Product Dashboard</h1>
       
       {/* TODO: Add buttons to allow filtering by availability */}
-      <button onClick={() => setFilter("all")}>All</button>
-      <button onClick={() => setFilter("inStock")}>In Stock</button>
-      <button onClick={() => setFilter("outOfStock")}>Out of Stock</button>
+      <Button style={{margin: "0.5rem"}} variant="contained" color="primary" onClick={() => setFilter("all")}>All</Button>
+      <Button style={{margin: "0.5rem"}} variant="contained" color="primary" onClick={() => setFilter("inStock")}>In Stock</Button>
+      <Button style={{margin: "0.5rem"}} variant="contained" color="primary" onClick={() => setFilter("outOfStock")}>Out of Stock</Button>
 
       {/* TODO: Render the ProductList component and pass filtered products */}
       <ProductList products={filteredProducts} onRemove={handleRemove} />

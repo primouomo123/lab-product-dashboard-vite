@@ -2,5 +2,6 @@
   display: flex;
   flex-wrap: wrap;        /* Allows cards to move to the next row */
   gap: 1rem;              /* Space between cards */
-  justify-content: flex-start; /* Align cards to the left */
+  justify-content: space-around; /* Align cards to the center */
+  padding-top: 2rem;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/ProductCard.module.css';
+import Button from '@mui/material/Button';
 
 const ProductCard = ({ product, onRemove }) => {
   return (
@@ -16,7 +17,7 @@ const ProductCard = ({ product, onRemove }) => {
       {/* TODO: Show if the product is in stock or out of stock */}
       <p>{product.inStock ? "In Stock" : "Out of Stock"}</p>
 
-      <button onClick={() => onRemove(product.id)}>Remove</button>
+      <Button variant="contained" color="secondary" onClick={() => onRemove(product.id)}>Remove</Button>
       
     </div>
     </div>

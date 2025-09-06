@@ -1,18 +1,45 @@
 /* TODO: Style the product card container */
+/* Product card container for in-stock items */
 .inStockClass {
+  flex: 1 1 300px;
   background-color: #e0ffe0;
   border: 1px solid #0f0;
   padding: 1rem;
-  border-radius: 8px;
-  width: 420px;
+  border-radius: 12px;
+  min-width: 200px;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* TODO: Add special styling for out-of-stock products */
+/* Hover effect for in-stock items */
+.inStockClass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product card container for out-of-stock items */
 .outOfStockClass {
+  flex: 1 1 300px;
   background-color: #ffe0e0;
   border: 1px solid #f00;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  min-width: 200px;
+  max-width: 400px;
   opacity: 0.6;
-  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for out-of-stock items */
+.outOfStockClass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
 }
